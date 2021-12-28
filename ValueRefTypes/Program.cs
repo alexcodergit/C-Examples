@@ -36,6 +36,7 @@ namespace ValueRefTypes
         // original rectangle not affected
         static Rectangle CalculateNewRectangleArea(Rectangle rec)
         {
+            // allocates object on heap
             Rectangle ret = new(rec.Side1, rec.Side2);
             ret.Area = ret.Side1 * ret.Side2;
             return ret;
@@ -52,6 +53,7 @@ namespace ValueRefTypes
         // orginal quadtrat not affected
         static Quadrat CalculateNewQuadratArea(Quadrat q)
         {
+            // allocates object on stack
             Quadrat ret = new(q.Side);
             ret.Area = ret.Side * ret.Side;
             return ret;
