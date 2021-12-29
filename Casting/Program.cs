@@ -43,101 +43,32 @@ namespace Casting
             {
                 return amount;
             }
-            if (from.GetType() == typeof(Euro))
+
+            decimal fromInUs = amount / GetUnitsPerUSD(from);
+            decimal retAmount = fromInUs * GetUnitsPerUSD(to);
+            return retAmount;
+        }
+        static decimal GetUnitsPerUSD(Currency cur)
+        {
+            if (cur.GetType() == typeof(Euro))
             {
-                decimal fromInUs = amount / ((Euro)from).UnitsPerUsd;
-                if (to.GetType() == typeof(Ruble))
-                {
-                    decimal retAmount = fromInUs * ((Ruble)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(USDollar))
-                {
-                    decimal retAmount = fromInUs * ((USDollar)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Hrivna))
-                {
-                    decimal retAmount = fromInUs * ((Hrivna)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else
-                {
-                    throw new ArgumentException($"Unknown Currency {to.GetCurrencyName()}");
-                }
+                return ((Euro)cur).UnitsPerUsd;
             }
-            else if (from.GetType() == typeof(USDollar))
+            else if (cur.GetType() == typeof(Ruble))
             {
-                decimal fromInUs = 1.0M;
-                if (to.GetType() == typeof(Ruble))
-                {
-                    decimal retAmount = fromInUs * ((Ruble)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Euro))
-                {
-                    decimal retAmount = fromInUs * ((Euro)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Hrivna))
-                {
-                    decimal retAmount = fromInUs * ((Hrivna)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else
-                {
-                    throw new ArgumentException($"Unknown Currency {to.GetCurrencyName()}");
-                }
+                return ((Ruble)cur).UnitsPerUsd;
             }
-            else if (from.GetType() == typeof(Ruble))
+            else if (cur.GetType() == typeof(Hrivna))
             {
-                decimal fromInUs = amount / ((Ruble)from).UnitsPerUsd;
-                if (to.GetType() == typeof(USDollar))
-                {
-                    decimal retAmount = fromInUs * ((USDollar)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Hrivna))
-                {
-                    decimal retAmount = fromInUs * ((Hrivna)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Euro))
-                {
-                    decimal retAmount = fromInUs * ((Euro)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else
-                {
-                    throw new ArgumentException($"Unknown Currency {to.GetCurrencyName()}");
-                }
+                return ((Hrivna)cur).UnitsPerUsd;
             }
-            else if (from.GetType() == typeof(Hrivna))
+            else if ((cur.GetType() == typeof(USDollar)))
             {
-                decimal fromInUs = amount / ((Hrivna)from).UnitsPerUsd;
-                if (to.GetType() == typeof(USDollar))
-                {
-                    decimal retAmount = fromInUs * ((USDollar)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else if (to.GetType() == typeof(Euro))
-                {
-                    decimal retAmount = fromInUs * ((Euro)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                if (to.GetType() == typeof(Ruble))
-                {
-                    decimal retAmount = fromInUs * ((Ruble)to).UnitsPerUsd;
-                    return retAmount;
-                }
-                else
-                {
-                    throw new ArgumentException($"Unknown Currency {to.GetCurrencyName()}");
-                }
+                return ((USDollar)cur).UnitsPerUsd;
             }
             else
             {
-                throw new ArgumentException($"Unknown Currency {from.GetCurrencyName()}");
+                throw new ArgumentException($"Unknown Currency {cur.GetCurrencyName()}");
             }
         }
     }
