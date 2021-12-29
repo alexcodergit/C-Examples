@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Casting/1.0.0": {
+      "ValueRefTypes/1.0.0": {
         "runtime": {
-          "Casting.dll": {}
+          "ValueRefTypes.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Casting/1.0.0": {
+    "ValueRefTypes/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
