@@ -20,14 +20,14 @@ namespace BoxingUnboxing
             sw.Stop();
             TimeSpan ts = sw.Elapsed;
 
-            Console.WriteLine($"Boxing of decimal has taken {ts.Ticks.ToString()} ticks");
+            Console.WriteLine($"Boxing of decimal has taken {ts.Ticks} ticks");
 
             Stopwatch sw2 = Stopwatch.StartNew();
             decimal d = dm; // assignment
             sw2.Stop();
             TimeSpan ts2 = sw2.Elapsed;
 
-            Console.WriteLine($"Simple assignment takes {ts2.Ticks.ToString()} ticks");
+            Console.WriteLine($"Simple assignment takes {ts2.Ticks} ticks");
             // to keep compiler happy
             Console.WriteLine((decimal)o);
             Console.WriteLine(d);
@@ -42,14 +42,14 @@ namespace BoxingUnboxing
             sw.Stop();
             TimeSpan ts = sw.Elapsed;
 
-            Console.WriteLine($"Unboxing of decimal has taken {ts.Ticks.ToString()} ticks");
+            Console.WriteLine($"Unboxing of decimal has taken {ts.Ticks} ticks");
 
             Stopwatch sw2 = Stopwatch.StartNew();
             decimal y = dm; // assignment
             sw2.Stop();
             TimeSpan ts2 = sw2.Elapsed;
 
-            Console.WriteLine($"Simple assignment takes {ts2.Ticks.ToString()} ticks");
+            Console.WriteLine($"Simple assignment takes {ts2.Ticks} ticks");
             // to keep compiler happy
             Console.WriteLine(d);
             Console.WriteLine(y);
