@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxingUnboxing", "BoxingUnb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerables", "Enumerables\Enumerables.csproj", "{016DDC33-94C4-4840-975A-47F0272FB4F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{1165213A-C862-4CB4-B974-C0663D914E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{1165213A-C862-4CB4-B974-C0663D914E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IComparableInterface", "IComparableInterface\IComparableInterface.csproj", "{D24AB669-EB4C-4D95-BD8E-41FCBE7A0D36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{1165213A-C862-4CB4-B974-C0663D914E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1165213A-C862-4CB4-B974-C0663D914E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1165213A-C862-4CB4-B974-C0663D914E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24AB669-EB4C-4D95-BD8E-41FCBE7A0D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24AB669-EB4C-4D95-BD8E-41FCBE7A0D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24AB669-EB4C-4D95-BD8E-41FCBE7A0D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24AB669-EB4C-4D95-BD8E-41FCBE7A0D36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
