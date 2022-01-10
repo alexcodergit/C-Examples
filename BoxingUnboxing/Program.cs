@@ -13,19 +13,19 @@ namespace BoxingUnboxing
         }
         static void MeasureBoxingTime()
         {
-            decimal dm = 1.0M;
+            var dm = 1.0M;
             Stopwatch sw = new();
             sw.Start();
             object o = dm;  // boxing
             sw.Stop();
-            TimeSpan ts = sw.Elapsed;
+            var ts = sw.Elapsed;
 
             Console.WriteLine($"Boxing of decimal has taken {ts.Ticks} ticks");
 
-            Stopwatch sw2 = Stopwatch.StartNew();
+            var sw2 = Stopwatch.StartNew();
             decimal d = dm; // assignment
             sw2.Stop();
-            TimeSpan ts2 = sw2.Elapsed;
+            var ts2 = sw2.Elapsed;
 
             Console.WriteLine($"Simple assignment takes {ts2.Ticks} ticks");
             // to keep compiler happy
@@ -34,20 +34,20 @@ namespace BoxingUnboxing
         }
         static void MeasureUnboxingTime()
         {
-            decimal dm = 1.0M;
-            object o = dm;
+            var dm = 1.0M;
+            var o = dm;
             Stopwatch sw = new();
             sw.Start();
-            decimal d = (decimal)o;  // unboxing
+            decimal d = o;  // unboxing
             sw.Stop();
             TimeSpan ts = sw.Elapsed;
 
             Console.WriteLine($"Unboxing of decimal has taken {ts.Ticks} ticks");
 
-            Stopwatch sw2 = Stopwatch.StartNew();
-            decimal y = dm; // assignment
+            var sw2 = Stopwatch.StartNew();
+            var y = dm; // assignment
             sw2.Stop();
-            TimeSpan ts2 = sw2.Elapsed;
+            var ts2 = sw2.Elapsed;
 
             Console.WriteLine($"Simple assignment takes {ts2.Ticks} ticks");
             // to keep compiler happy

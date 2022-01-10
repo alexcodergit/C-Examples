@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Casting
+﻿namespace Casting
 {
     class Euro : Currency
     {
-        private decimal _unitsPerUsd;
-        public new decimal UnitsPerUsd
-        {
-            get => _unitsPerUsd;
-            set => _unitsPerUsd = value;
-        }
-        public Euro() : base() { }
+        public Euro() {}
 
         override public string GetCurrencyName()
         {
