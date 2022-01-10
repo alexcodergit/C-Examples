@@ -7,7 +7,7 @@ namespace OOP
     {
         static void Main(string[] args)
         {
-            LinkedList<Vehicle> vehicles = new LinkedList<Vehicle>();
+            LinkedList<Vehicle> vehicles = new();
             vehicles.AddFirst(new Car(200));
             vehicles.AddFirst(new Amphibia(100));
             vehicles.AddFirst(new Airplane(1000));

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -15,10 +11,10 @@ namespace OOP
         private const int UpperSpeedLimit = 50;
         private const int LowerSpeedLimit = 0;
 
-        public Boat() : base()
+        public Boat()
         { }
 
-        public Boat(int speed) : base()
+        public Boat(int speed)
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -43,7 +39,7 @@ namespace OOP
 
         public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[1] { OperatingEnvironment.WATER };
+            return new OperatingEnvironment[1] { OperatingEnvironment.Water };
         }
     }
 }

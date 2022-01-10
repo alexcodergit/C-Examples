@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -12,10 +8,10 @@ namespace OOP
         private const int LowerSpeedLimit = 0;
         // Amphibia derived from Car
         // contains same fields
-        public Amphibia() : base()
+        public Amphibia()
         { }
 
-        public Amphibia(int speed) : base()
+        public Amphibia(int speed)
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -42,7 +38,7 @@ namespace OOP
 
         public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[2] { OperatingEnvironment.LAND, OperatingEnvironment.WATER };
+            return new OperatingEnvironment[2] { OperatingEnvironment.Land, OperatingEnvironment.Water };
         }
     }
 }

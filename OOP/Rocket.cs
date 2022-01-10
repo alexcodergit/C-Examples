@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -11,9 +7,9 @@ namespace OOP
         private const int UpperSpeedLimit = 100000;
         private const int LowerSpeedLimit = 0;
 
-        public Rocket() : base()
+        public Rocket()
         { }
-        public Rocket(int speed):base()
+        public Rocket(int speed)
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -32,14 +28,14 @@ namespace OOP
         }
 
         // overrides method of base class
-        override public string GetClassName()
+        public override string GetClassName()
         {
             return "Rocket";
         }
 
-        override public OperatingEnvironment[] GetEnvironment()
+        public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[2] { OperatingEnvironment.AIR, OperatingEnvironment.SPACE };
+            return new OperatingEnvironment[2] { OperatingEnvironment.Air, OperatingEnvironment.Space };
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -11,10 +7,10 @@ namespace OOP
         private const int UpperSpeedLimit = 1000;
         private const int LowerSpeedLimit = 0;
 
-        public Airplane() : base()
+        public Airplane()
         { }
 
-        public Airplane(int speed):base()
+        public Airplane(int speed)
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -40,7 +36,7 @@ namespace OOP
 
         public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[1] { OperatingEnvironment.AIR };
+            return new OperatingEnvironment[1] { OperatingEnvironment.Air };
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -13,11 +9,10 @@ namespace OOP
     {
         private const int UpperSpeedLimit = 500;
         private const int LowerSpeedLimit = 0;
-        public Car() : base()
-        {
-        }
+        public Car()
+        {}
 
-        public Car(int speed) : base()
+        public Car(int speed)
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -42,7 +37,7 @@ namespace OOP
         }
         public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[1] { OperatingEnvironment.LAND };
+            return new OperatingEnvironment[1] { OperatingEnvironment.Land };
         }
     }
 }
