@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 
-
 namespace Enumerables
 {
     public class MoviesEnum : IEnumerator

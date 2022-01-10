@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Casting
+﻿namespace Casting
 {
     class USDollar : Currency
     {
@@ -14,8 +8,7 @@ namespace Casting
             get => _unitsPerUsd;
             set { }
         }
-        public USDollar() : base()
-        { }
+        public USDollar() { }
 
         override public string GetCurrencyName()
         {
