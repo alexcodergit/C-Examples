@@ -15,7 +15,7 @@ namespace ValueRefTypes
 
             CalculateRectangleArea(ref rectangle);
 
-            Console.WriteLine($"Original rectangle with area, Sides: 2 x {withArea.Side1},  2 x {rectangle.Side2}, Area: {rectangle.Area}");
+            Console.WriteLine($"Original rectangle with area, Sides: 2 x {rectangle.Side1},  2 x {rectangle.Side2}, Area: {rectangle.Area}");
             Console.WriteLine("######################################");
 
             Console.WriteLine("Calculating with structs, geometric figure - quadrat.");
@@ -45,6 +45,7 @@ namespace ValueRefTypes
         // calculates area of original rectangle
         static void CalculateRectangleArea(ref Rectangle rec)
         {
+            rec = new Rectangle(rec.Side1, rec.Side2);
             rec.Area = rec.Side1 * rec.Side2;
         }
 

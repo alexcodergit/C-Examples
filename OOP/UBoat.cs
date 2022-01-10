@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
@@ -13,7 +9,7 @@ namespace OOP
         // UBoat derived from Boat
         // contains same fields,
         // _maxSpeed
-        public UBoat() : base()
+        public UBoat()
         { }
 
         public UBoat(int speed)
@@ -35,13 +31,13 @@ namespace OOP
         }
 
         // overrides method of base class
-        override public string GetClassName()
+        public override string GetClassName()
         {
             return "UBoat";
         }
-        override public OperatingEnvironment[] GetEnvironment()
+        public override OperatingEnvironment[] GetEnvironment()
         {
-            return new OperatingEnvironment[2] { OperatingEnvironment.WATER, OperatingEnvironment.UNDER_WATER };
+            return new OperatingEnvironment[2] { OperatingEnvironment.Water, OperatingEnvironment.UnderWater };
         }
     }
 }
