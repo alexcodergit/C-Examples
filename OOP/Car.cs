@@ -17,7 +17,7 @@ namespace OOP
         {
         }
 
-        public Car(int speed):base()
+        public Car(int speed) : base()
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -36,11 +36,11 @@ namespace OOP
             _maxSpeed = speed;
         }
 
-        override public string GetClassName()
+        public override string GetClassName()
         {
             return "Car";
         }
-        override public OperatingEnvironment[] GetEnvironment()
+        public override OperatingEnvironment[] GetEnvironment()
         {
             return new OperatingEnvironment[1] { OperatingEnvironment.LAND };
         }

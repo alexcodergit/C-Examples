@@ -33,12 +33,12 @@ namespace OOP
         }
 
         // overrides method of base class
-        override public string GetClassName()
+        public override string GetClassName()
         {
             return "Airplane";
         }
 
-        override public OperatingEnvironment[] GetEnvironment()
+        public override OperatingEnvironment[] GetEnvironment()
         {
             return new OperatingEnvironment[1] { OperatingEnvironment.AIR };
         }

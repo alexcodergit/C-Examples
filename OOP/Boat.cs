@@ -18,7 +18,7 @@ namespace OOP
         public Boat() : base()
         { }
 
-        public Boat(int speed):base()
+        public Boat(int speed) : base()
         {
             if (!CheckLimits(speed, LowerSpeedLimit, UpperSpeedLimit))
             {
@@ -35,12 +35,13 @@ namespace OOP
             }
             _maxSpeed = speed;
         }
-        override public string GetClassName()
+
+        public override string GetClassName()
         {
             return "Boat";
         }
 
-        override public OperatingEnvironment[] GetEnvironment()
+        public override OperatingEnvironment[] GetEnvironment()
         {
             return new OperatingEnvironment[1] { OperatingEnvironment.WATER };
         }
