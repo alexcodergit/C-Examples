@@ -1,12 +1,26 @@
-﻿namespace Casting
+﻿using System;
+namespace Casting
 {
-    class Hrivna : Currency
+    public class Hrivna : Currency
     {
-        public Hrivna(){ }
+        public Hrivna() { }
 
         override public string GetCurrencyName()
         {
             return "UAH";
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if ((obj == null) || !GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            return (GetCurrencyName() == ((Hrivna)obj).GetCurrencyName());
+        }
+        public override int GetHashCode()
+        {
+            return "Hrivna".GetHashCode();
         }
     }
 }

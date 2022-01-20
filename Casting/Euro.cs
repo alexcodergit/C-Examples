@@ -1,12 +1,26 @@
-﻿namespace Casting
+﻿using System;
+
+namespace Casting
 {
-    class Euro : Currency
+    public class Euro : Currency
     {
-        public Euro() {}
+        public Euro() { }
 
         override public string GetCurrencyName()
         {
             return "EUR";
+        }
+        public override bool Equals(Object obj)
+        {
+            if ((obj == null) || !GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            return (GetCurrencyName() == ((Euro)obj).GetCurrencyName());
+        }
+        public override int GetHashCode()
+        {
+            return "EUR".GetHashCode();
         }
     }
 }

@@ -1,15 +1,14 @@
 ﻿namespace Casting
 {
-    abstract class Currency
+    public abstract class Currency
     {
-        private decimal _unitsPerUsd;
-        public decimal UnitsPerUsd
+        private double _unitsPerUsd;
+        public double UnitsPerUsd
         {
             get => _unitsPerUsd;
             set => _unitsPerUsd = value;
         }
-        public Currency()
-        {}
+        public Currency() { }
         abstract public string GetCurrencyName();
     }
 }

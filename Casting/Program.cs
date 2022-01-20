@@ -2,7 +2,7 @@
 
 namespace Casting
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -11,12 +11,12 @@ namespace Casting
             Ruble ruble = new();
             Hrivna hrivna = new();
 
-            euro.UnitsPerUsd = 0.8842M;
-            ruble.UnitsPerUsd = 73.70M;
-            hrivna.UnitsPerUsd = 27.234M;
+            euro.UnitsPerUsd = 0.8842;
+            ruble.UnitsPerUsd = 73.70;
+            hrivna.UnitsPerUsd = 27.234;
 
             int amount = 10;
-            decimal converted = ConvertCurrency(euro, dollar, amount);
+            double converted = ConvertCurrency(euro, dollar, amount);
             Console.WriteLine($"{amount} {euro.GetCurrencyName()} = {converted} {dollar.GetCurrencyName()}");
 
             converted = ConvertCurrency(dollar, euro, amount);
@@ -37,18 +37,18 @@ namespace Casting
             Console.ReadLine();
         }
 
-        static decimal ConvertCurrency(Currency from, Currency to, int amount)
+        public static double ConvertCurrency(Currency from, Currency to, double amount)
         {
             if (from.GetType() == to.GetType())
             {
                 return amount;
             }
 
-            decimal fromInUs = amount / GetUnitsPerUSD(from);
-            decimal retAmount = fromInUs * GetUnitsPerUSD(to);
+            double fromInUs = amount / GetUnitsPerUSD(from);
+            double retAmount = fromInUs * GetUnitsPerUSD(to);
             return retAmount;
         }
-        static decimal GetUnitsPerUSD(Currency cur)
+        static double GetUnitsPerUSD(Currency cur)
         {
             if (cur.GetType() == typeof(Euro))
             {

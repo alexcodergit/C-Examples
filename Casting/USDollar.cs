@@ -1,9 +1,11 @@
-﻿namespace Casting
+﻿using System;
+
+namespace Casting
 {
-    class USDollar : Currency
+    public class USDollar : Currency
     {
-        private const decimal _unitsPerUsd = 1.0M;
-        public new decimal UnitsPerUsd
+        private const double _unitsPerUsd = 1.0;
+        public new double UnitsPerUsd
         {
             get => _unitsPerUsd;
             set { }
@@ -13,6 +15,18 @@
         override public string GetCurrencyName()
         {
             return "USD";
+        }
+        public override bool Equals(Object obj)
+        {
+            if ((obj == null) || !GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            return (GetCurrencyName() == ((USDollar)obj).GetCurrencyName());
+        }
+        public override int GetHashCode()
+        {
+            return "USD".GetHashCode();
         }
     }
 }
