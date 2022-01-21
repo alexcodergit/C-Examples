@@ -65,7 +65,7 @@ namespace ListDictionary
                 USDollar convertTo = new();
                 foreach (var entry in balances)
                 {
-                    usdAmount += Casting.Program.ConvertCurrency(entry.Key, convertTo, entry.Value);
+                    usdAmount += Currency.ConvertCurrency(entry.Key, convertTo, entry.Value);
                 }
                 return usdAmount;
             }

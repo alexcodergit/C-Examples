@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IComparableInterface", "ICo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EqualsGetHashCode", "EqualsGetHashCode\EqualsGetHashCode.csproj", "{C6EBEE47-5DB7-45D7-ADF2-52B455D8D7A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListDictionary", "ListDictionary\ListDictionary.csproj", "{559C629A-7807-4929-9507-81306871630D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListDictionary", "ListDictionary\ListDictionary.csproj", "{559C629A-7807-4929-9507-81306871630D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericTypes", "GenericTypes\GenericTypes.csproj", "{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{559C629A-7807-4929-9507-81306871630D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{559C629A-7807-4929-9507-81306871630D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{559C629A-7807-4929-9507-81306871630D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

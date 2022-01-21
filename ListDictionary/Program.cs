@@ -104,6 +104,7 @@ namespace ListDictionary
             mcc.AddAmount(hrivna, 999);
             mcc.OutputBalances();
             Console.WriteLine($"Total balance in US Dollars {mcc.Balance}");
+
             Console.WriteLine();
         }
 
