@@ -25,7 +25,7 @@ namespace Casting
             return retAmount;
         }
 
-        private static double GetUnitsPerUSD(Currency cur)
+        public static double GetUnitsPerUSD(Currency cur)
         {
             if (cur.GetType() == typeof(Euro))
             {
