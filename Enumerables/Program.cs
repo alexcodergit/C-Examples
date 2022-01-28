@@ -46,7 +46,7 @@ namespace Enumerables
                 Console.WriteLine($"Movie name: {m.Title}, Genre: {m.Genre}, Appeared in {m.Year}");
             }
 
-            List<Movie> moviesList = new List<Movie>
+            List<Movie> moviesList = new()
             {
                 new("Ice Road", "Action", 2021),
                 new("Dune", "Adventure", 2021),
