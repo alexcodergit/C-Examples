@@ -32,9 +32,9 @@ namespace DelegatesLambdas
                 {
                     double converted = trans(from.Cur, to.Cur, amount);
                     int idx = ClientsDict[client].IndexOf(from);
-                    ClientsDict[client][idx].Amount -= amount;
+                    ClientsDict[client][idx].Add(-1 * amount);
                     idx = ClientsDict[client].IndexOf(to);
-                    ClientsDict[client][idx].Amount += converted;
+                    ClientsDict[client][idx].Add(converted);
                 }
             }
         }

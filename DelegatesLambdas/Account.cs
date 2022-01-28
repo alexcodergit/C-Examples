@@ -9,11 +9,10 @@ namespace DelegatesLambdas
         public Currency Cur;
         public double Amount;
 
-        public Account(int an, Currency c, double am)
+        public Account(int an, Currency c)
         {
             AccountNumber = an;
             Cur = c;
-            Amount = am;
         }
         // we cann add negatve amounts as well
         public void Add(double amount)
