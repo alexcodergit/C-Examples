@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Casting;
 
 namespace DelegatesLambdas
@@ -19,6 +20,11 @@ namespace DelegatesLambdas
             // calling method and passing delegate as argument
             bs.TransferFunds(500, cient1, acc1, acc2, Currency.ConvertCurrency);
             Console.WriteLine($"Amounts after transfer: account1: {acc1.Amount}, account2: {acc2.Amount}");
+
+            Console.WriteLine("Lambda example");
+            List<int> numbers = new() { 1, 2, 3 };
+            numbers.ForEach(delegate (int x) { Console.WriteLine(x * x); });
+            Console.WriteLine("");
         }
     }
 }
