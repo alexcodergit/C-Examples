@@ -1,0 +1,11 @@
+changed:
+
+ order of override modifiers corrected
+ ListDictonary:
+    linq methods of ListDictonary project simplified
+    added method iterating list elements using enumerator
+
+LINQ: 
+   random elements added
+   added method to find cients with minimal balance using LINQ
+    (FindClientsWithMinBalanceLinq(List<Client> clients))

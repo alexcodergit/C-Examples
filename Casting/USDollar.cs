@@ -12,7 +12,7 @@ namespace Casting
         }
         public USDollar() { }
 
-        override public string GetCurrencyName()
+        public override string GetCurrencyName()
         {
             return "USD";
         }

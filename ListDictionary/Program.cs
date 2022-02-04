@@ -22,6 +22,14 @@ namespace ListDictionary
             }
             Console.WriteLine();
 
+            Console.WriteLine("Look up fr Cient with name 'Client1' or passport number '2' using enumerators:");
+            var cl = FindClientUsngPassportOrName(clients.GetEnumerator(), 2, "Client1");
+            if (cl != null)
+            {
+                Console.WriteLine($"Cient's name: {cl.FirstName}, PassportNum: {cl.PassportNum}");
+            }
+            Console.WriteLine();
+
             Console.WriteLine("Look up fr Cient with name 'Client3' or passport number '100':");
             query = FindClientUsngPassportOrName(clients, 100, "Client3");
             foreach (var c in query)
@@ -41,6 +49,13 @@ namespace ListDictionary
             // show explicit the return type
             List<Client> ClientsMinBalance = FindClientsWithMinBalance(clients);
             foreach (var c in ClientsMinBalance)
+            {
+                Console.WriteLine($"Cient's name: {c.FirstName}, Balance: {c.Balance}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Clients with minimal balance using LINQ query:");
+            query = FindClientsWithMinBalanceLinq(clients);
+            foreach (var c in query)
             {
                 Console.WriteLine($"Cient's name: {c.FirstName}, Balance: {c.Balance}");
             }
@@ -108,24 +123,41 @@ namespace ListDictionary
             Console.WriteLine();
         }
 
-        // private utlities methods
+        // returns ALL clients with  PassportNum == pn or FirstName == name
         private static IEnumerable<Client> FindClientUsngPassportOrName(List<Client> clients, int pn, string name)
         {
-            IEnumerable<Client> query = clients.Where(Client => Client.PassportNum == pn || Client.FirstName == name);
-            return query;
+            return clients.Where(client => client.PassportNum == pn || client.FirstName == name);
+        }
+        // returns FIRST client in the sequence with PassportNum == pn or FirstName == name
+        private static Client FindClientUsngPassportOrName(List<Client>.Enumerator clients, int pn, string name)
+        {
+            while(clients.MoveNext())
+            {
+                if (clients.Current.PassportNum == pn || clients.Current.FirstName == name)
+                {
+                    return clients.Current;
+                }
+            }
+            return null;
         }
 
         private static IEnumerable<Client> FindClientsWithLowerBalance(List<Client> clients, double bal)
         {
-            IEnumerable<Client> query = clients.Where(Client => Client.Balance.CompareTo(bal) < 0);
-            return query;
+            return clients.Where(client => client.Balance.CompareTo(bal) < 0);
+        }
+
+        // finds all cients with Balance == minimal balance
+        private static IEnumerable<Client> FindClientsWithMinBalanceLinq(List<Client> clients)
+        {
+            var mb  = (from c in clients select c.Balance).Min();
+            return clients.Where(client => client.Balance == mb);
         }
 
         // here no LINQ used
-        // custom implementation make it more readable
+        // custom implementation
         private static List<Client> FindClientsWithMinBalance(List<Client> clients)
         {
-            if (clients.Count() < 1)
+            if (clients.Count < 1)
             {
                 return clients;
             }

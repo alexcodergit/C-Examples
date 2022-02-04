@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListDictionary", "ListDicti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericTypes", "GenericTypes\GenericTypes.csproj", "{35FBE8A7-AA66-4EE6-8C71-B07B2A023887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesLambdas", "DelegatesLambdas\DelegatesLambdas.csproj", "{356ECD42-159E-4866-BB38-2D40061F6D0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesLambdas", "DelegatesLambdas\DelegatesLambdas.csproj", "{356ECD42-159E-4866-BB38-2D40061F6D0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{5A06D96E-575B-4D90-81AA-0061C031D8BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{356ECD42-159E-4866-BB38-2D40061F6D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356ECD42-159E-4866-BB38-2D40061F6D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356ECD42-159E-4866-BB38-2D40061F6D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A06D96E-575B-4D90-81AA-0061C031D8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A06D96E-575B-4D90-81AA-0061C031D8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A06D96E-575B-4D90-81AA-0061C031D8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A06D96E-575B-4D90-81AA-0061C031D8BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

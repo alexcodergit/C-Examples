@@ -6,7 +6,7 @@ namespace Casting
     {
         public Ruble() { }
 
-        override public string GetCurrencyName()
+        public override string GetCurrencyName()
         {
             return "RUB";
         }

@@ -5,7 +5,7 @@ namespace Casting
     {
         public Hrivna() { }
 
-        override public string GetCurrencyName()
+        public override string GetCurrencyName()
         {
             return "UAH";
         }

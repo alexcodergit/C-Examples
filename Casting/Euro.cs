@@ -6,7 +6,7 @@ namespace Casting
     {
         public Euro() { }
 
-        override public string GetCurrencyName()
+        public override string GetCurrencyName()
         {
             return "EUR";
         }
