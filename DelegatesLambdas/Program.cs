@@ -25,6 +25,14 @@ namespace DelegatesLambdas
             List<int> numbers = new() { 1, 2, 3 };
             numbers.ForEach(delegate (int x) { Console.WriteLine(x * x); });
             Console.WriteLine("");
+
+            Console.WriteLine("Func example");
+            static int pow2(int x) => x * x;
+            numbers = new() { 4, 5, 6 };
+            numbers.ForEach(x => ApplyAndOutput(x, pow2));
+            Console.WriteLine("");
         }
+
+        private static void ApplyAndOutput(int x, Func<int, int> f) => Console.WriteLine(f(x));
     }
 }
