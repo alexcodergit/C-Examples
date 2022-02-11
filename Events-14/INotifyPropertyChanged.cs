@@ -5,6 +5,7 @@ namespace Events_14
     interface INotifyPropertyChanged
     {
         public delegate void PropertyChangedEventHandler(Object sender, EventArgs e);
+        void NotifyPropertyChanged(EventArgs e);
     }
 }
 

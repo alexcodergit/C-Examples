@@ -27,7 +27,11 @@ namespace Events_14
             args.OldDepartment = _department;
             _department = department;
             args.NewDepartment = _department;
-            Handler?.Invoke(this, args);
+            NotifyPropertyChanged(args);
+        }
+        public void NotifyPropertyChanged(EventArgs e)
+        {
+            Handler?.Invoke(this, e);
         }
     }
 }

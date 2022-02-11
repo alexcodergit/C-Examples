@@ -27,7 +27,12 @@ namespace Events_14
             args.OldAmount = _balance;
             _balance += amount;
             args.NewAmount = _balance;
-            Handler?.Invoke(this, args);
+            NotifyPropertyChanged(args);
+        }
+
+        public void NotifyPropertyChanged(EventArgs e)
+        {
+            Handler?.Invoke(this, e);
         }
     }
 }
