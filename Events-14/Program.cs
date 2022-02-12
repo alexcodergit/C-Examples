@@ -23,6 +23,23 @@ namespace Events_14
             an.ChangeDepartment("Executive");
             an.Handler -= DepartmentChanged;
             Console.WriteLine();
+
+            Console.WriteLine("Using Event Queue");
+            var eq = new EventQueue(3);
+            eq.ThresholdExceeded += QueueThreshhold;
+            eq.Enqueue(1);
+            eq.Enqueue(2);
+            eq.Enqueue(3);
+            eq.Enqueue(4);
+            int x = eq.Dequeue();
+            x = eq.Dequeue();
+            x = eq.Dequeue();
+            x = eq.Dequeue();
+
+            var esr = new EventStreamReader(50);
+            esr.DevEvent += DeviationEvent;
+            esr.ReadStreamFromConsole();
+            esr.DevEvent -= DeviationEvent;
         }
 
         static void BalanceChanged(Object sender, EventArgs e)
@@ -32,6 +49,23 @@ namespace Events_14
         static void DepartmentChanged(Object sender, EventArgs e)
         {
             Console.WriteLine($"Departmnet of {((Employee)sender).Name} changed. Old department: {((DepartmentChangedEventArgs)e).OldDepartment}, new department {((DepartmentChangedEventArgs)e).NewDepartment}");
+        }
+        static void QueueThreshhold(Object sender, EventArgs e)
+        {
+            if (((EventQueue)sender).Count > 0)
+            {
+                Console.WriteLine($"Queue contains {((EventQueue)sender).Count} elements.");
+            }
+            else
+            {
+                Console.WriteLine("Queue is empty.");
+            }
+        }
+        static void DeviationEvent(Object sender, EventArgs e)
+        {
+            Console.WriteLine($"Previous number: {((DeviatonEventArgs)e).PrevNum}, " +
+                $"current number: {((DeviatonEventArgs)e).CurNum}, " +
+                $"deviation: {((DeviatonEventArgs)e).Deviation}");
         }
     }
 }
