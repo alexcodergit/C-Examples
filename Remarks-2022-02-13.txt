@@ -1,0 +1,3 @@
+added:
+ new project Events-14, showing examples of event driven programming in C#
+ new project Exceptions-15, showing examples of exceptions handling in C#
