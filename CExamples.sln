@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesLambdas", "Delegat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events-14", "Events-14\Events-14.csproj", "{D5CF4A05-AC71-45AC-9966-EAC33186E30A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions-15", "Exceptions-15\Exceptions-15.csproj", "{E93C4F76-2B3C-4DDC-AA7F-838F08B21121}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{D5CF4A05-AC71-45AC-9966-EAC33186E30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5CF4A05-AC71-45AC-9966-EAC33186E30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5CF4A05-AC71-45AC-9966-EAC33186E30A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E93C4F76-2B3C-4DDC-AA7F-838F08B21121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E93C4F76-2B3C-4DDC-AA7F-838F08B21121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E93C4F76-2B3C-4DDC-AA7F-838F08B21121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E93C4F76-2B3C-4DDC-AA7F-838F08B21121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
